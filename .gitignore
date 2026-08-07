@@ -1,0 +1,18 @@
+# OS Metadata files
+.DS_Store
+Thumbs.db
+
+# Text Editor / IDE workspaces
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+
+# Local development logs and server configs
+*.log
+.npm/
+node_modules/
+
+# Ignore compiled local test bundles from the download engine
+*.zip
