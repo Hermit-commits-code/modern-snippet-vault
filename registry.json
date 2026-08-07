@@ -22,6 +22,13 @@
       "category": "overlays",
       "tags": ["modal", "dialog", "keyboard", "aria-live"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "responsive-navbar",
+      "title": "Responsive Global Navbar",
+      "category": "navigation",
+      "tags": ["navbar", "navigation", "header", "responsive", "mobile-menu"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
