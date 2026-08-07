@@ -8,6 +8,13 @@
       "category": "primitives",
       "tags": ["button", "interactive", "focus-visible"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "floating-input",
+      "title": "Floating Label Input Field",
+      "category": "forms",
+      "tags": ["input", "form", "floating-label", "validation"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }
