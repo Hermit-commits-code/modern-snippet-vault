@@ -1,0 +1,13 @@
+{
+  "$schema": "https://shadcn.com",
+  "name": "Custom Snippet Vault",
+  "items": [
+    {
+      "id": "primary-button",
+      "title": "Primary Action Button",
+      "category": "primitives",
+      "tags": ["button", "interactive", "focus-visible"],
+      "files": ["index.html", "style.css"]
+    }
+  ]
+}

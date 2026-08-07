@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippet Vault Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- JSZip handles client-side zip creation instantly -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.js"
+      integrity="sha512-3FKAKNDHbfUwAgW45wNAvfgJDDdNoTi5PZWU7ak3Xm0X8u0LbDBWZEyPklRebTZ8r+p0M2KIJWDYZQjDPyYQEA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="brand">Vault.dev</div>
+        <input type="text" id="search-bar" placeholder="Search snippets (e.g., button, modal)...">
+        <nav id="category-menu">
+          <button class="nav-item active" data-cat="all">All Components</button>
+          <button class="nav-item" data-cat="primitives">Primitives</button>
+          <button class="nav-item" data-cat="forms">Forms</button>
+          <button class="nav-item" data-cat="overlays">Overlays</button>
+        </nav>
+        <div id="components-list" class="components-menu">
+          <!-- Injected dynamically by app.js -->
+        </div>
+      </aside>
+
+      <!-- Workspace Panel -->
+      <main class="workspace">
+        <header class="workspace-header">
+          <h1 id="active-title">Select a Component</h1>
+          <button id="download-btn" class="btn-primary" disabled>Download Bundle (.zip)</button>
+        </header>
+
+        <!-- Sandboxed Live Preview Panel -->
+        <section class="preview-panel">
+          <div class="panel-header">Live Sandbox Preview</div>
+          <div class="iframe-wrapper">
+            <iframe id="sandbox-iframe" sandbox="allow-scripts"></iframe>
+          </div>
+        </section>
+
+        <!-- Source Code Tabs -->
+        <section class="code-panel">
+          <div class="tab-header">
+            <button class="tab-btn active" data-file="html">HTML</button>
+            <button class="tab-btn" data-file="css">CSS</button>
+            <button class="tab-btn" data-file="js">JS</button>
+          </div>
+          <pre class="code-display"><code id="code-block">Select a component to inspect code structure.</code></pre>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,230 @@
+:root {
+  --bg-app: #09090b;
+  --bg-sidebar: #0c0c0e;
+  --bg-panel: #141417;
+  --border-subtle: #27272a;
+  --text-main: #fafafa;
+  --text-muted: #a1a1aa;
+  --accent-primary: #3b82f6;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Outer Application Layout Splitter */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar control unit */
+.sidebar {
+  width: 280px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-subtle);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+#search-bar {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem 0.75rem;
+  color: inherit;
+  border-radius: var(--radius-md);
+  outline: none;
+  font-size: 0.9rem;
+  transition: border-color .2s;
+}
+
+#search-bar:focus {
+  border-color: var(--accent-primary);
+}
+
+/* Navigation Filters */
+#category-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: var(--bg-panel);
+  color: var(--text-main);
+}
+
+/* Dynamic Components Sub-Menu */
+.components-menu {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-top: 0.5rem;
+  overflow-y: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+.comp-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+.comp-btn:hover,
+.comp-btn.active {
+  background: var(--bg-panel);
+  color: var(--accent-primary);
+}
+
+/* Primary Code Workspace Layout */
+.workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#active-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: #fafafa;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: opacity .2s;
+}
+
+.btn-primary:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Unified Blueprint Container Panels */
+.preview-panel,
+.code-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Live Target Component Sandbox */
+.iframe-wrapper {
+  height: 280px;
+  background: #fafafa;
+  position: relative;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Code Inspector Tab Elements */
+.tab-header {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  color: var(--text-main);
+  background: var(--bg-app);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Code Output Blocks */
+.code-display {
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+#code-block {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+}

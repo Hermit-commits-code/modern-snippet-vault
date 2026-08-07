@@ -1,0 +1,49 @@
+/* ==========================================================================
+   DESIGN UTILITY SYSTEM VARIABLE TOKENS
+   ========================================================================== */
+
+:root {
+  /* System Brand Palettes */
+  --vlt-neutral-50: #fafafa;
+  --vlt-neutral-100: #f4f4f5;
+  --vlt-neutral-200: #e4e4e7;
+  --vlt-neutral-400: #a1a1aa;
+  --vlt-neutral-700: #3f3f46;
+  --vlt-neutral-800: #27272a;
+  --vlt-neutral-900: #18181b;
+  --vlt-neutral-950: #09090b;
+
+  /* Intent Variables */
+  --vlt-brand-primary: #3b82f6;
+  --vlt-brand-hover: #2563eb;
+  --vlt-focus-ring: rgba(59, 130, 246, 0.5);
+
+  /* Shared Border Radii */
+  --vlt-radius-sm: 4px;
+  --vlt-radius-md: 6px;
+  --vlt-radius-lg: 8px;
+
+  /* Structural Transitions */
+  --vlt-transition-fast: 0.15s ease;
+  --vlt-transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   GLOBAL ACCESSIBILITY & SHADOW UTILITIES
+   ========================================================================== */
+
+/* Standard Keyboard Accessible Focus Utility Indicator */
+.vlt-focus-visible:focus-visible {
+  outline: 2px solid var(--vlt-brand-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--vlt-focus-ring);
+}
+
+/* Base Shadow Matrix Elevation Tokens */
+.vlt-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.vlt-shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
