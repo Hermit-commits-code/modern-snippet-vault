@@ -1,0 +1,48 @@
+.vlt-btn-primary {
+  /* Leverage variables that line up directly with tokens.css */
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  /* Layout constraints */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* Performance smooth state animations */
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+/* Interaction Focus Overrides */
+.vlt-btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.vlt-btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Keyboard Accessible Rings matching shadcn principles */
+.vlt-btn-primary:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Nested icon constraints */
+.vlt-btn-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.vlt-btn-primary:hover .vlt-btn-icon {
+  transform: translateX(2px);
+}
