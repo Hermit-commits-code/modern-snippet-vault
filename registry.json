@@ -15,6 +15,13 @@
       "category": "forms",
       "tags": ["input", "form", "floating-label", "validation"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "accessible-modal",
+      "title": "Accessible Dialog Modal",
+      "category": "overlays",
+      "tags": ["modal", "dialog", "keyboard", "aria-live"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
