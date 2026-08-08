@@ -127,6 +127,13 @@
       "category": "overlays",
       "tags": ["shopping-cart", "collection", "drawer", "data-display", "interactive"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "progressive-disclosure-panel",
+      "title": "Progressive Disclosure Panel",
+      "category": "data-display",
+      "tags": ["progressive-disclosure", "tron", "cyberpunk", "collapse", "animation"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }

@@ -1,0 +1,152 @@
+/* Core Tron x Cyberpunk Container Design Rules */
+.vlt-tron-terminal-container {
+  --neon-cyan: #00f3ff;
+  --neon-magenta: #ff0055;
+  --bg-dark: #050508;
+  --border-line: #101827;
+
+  background-color: var(--bg-dark);
+  border: 1px solid var(--neon-cyan);
+  padding: 1.5rem;
+  border-radius: 4px;
+  max-width: 460px;
+  width: 100%;
+  font-family: monospace;
+  /* Monospace typography guarantees that digital sci-fi HUD look */
+  color: #fafafa;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.15), inset 0 0 10px rgba(0, 243, 255, 0.05);
+  position: relative;
+}
+
+/* Upper Status Metadata Row */
+.vlt-tron-terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.vlt-tron-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.vlt-tron-pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--neon-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.vlt-tron-username {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 6px rgba(0, 243, 255, 0.3);
+}
+
+.vlt-tron-version {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.vlt-tron-summary-line {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+/* Hide structural checkbox completely from view */
+.vlt-tron-checkbox-state {
+  display: none;
+}
+
+/* Interactive Cyber Trigger Label Button Button */
+.vlt-tron-disclosure-btn {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+/* Flash button magenta and glow when hovered */
+.vlt-tron-disclosure-btn:hover {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+  background-color: rgba(255, 0, 85, 0.03);
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+}
+
+/* Control text states dynamically within HTML check states */
+.vlt-btn-text-opened {
+  display: none;
+}
+
+.vlt-btn-text-closed {
+  display: inline;
+}
+
+.vlt-tron-checkbox-state:checked~.vlt-tron-disclosure-btn .vlt-btn-text-opened {
+  display: inline;
+}
+
+.vlt-tron-checkbox-state:checked~.vlt-tron-disclosure-btn .vlt-btn-text-closed {
+  display: none;
+}
+
+.vlt-tron-checkbox-state:checked~.vlt-tron-disclosure-btn {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+}
+
+/* Hidden Progressive Disclosure Slide Container Layer */
+.vlt-tron-disclosed-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Force container expand seamlessly when input checkbox checks active */
+.vlt-tron-checkbox-state:checked~.vlt-tron-disclosed-panel {
+  max-height: 320px;
+}
+
+/* Inner Expanded Text Block Styling rules */
+.vlt-tron-disclosed-inner {
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border-line);
+  margin-top: 1.5rem;
+}
+
+.vlt-tron-subheading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--neon-magenta);
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 6px rgba(255, 0, 85, 0.2);
+}
+
+.vlt-tron-data-block {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin-bottom: 1.25rem;
+}
+
+.vlt-tron-data-block:last-child {
+  margin-bottom: 0;
+}
