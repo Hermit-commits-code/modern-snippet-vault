@@ -36,6 +36,13 @@
       "category": "primitives",
       "tags": ["footer", "layout", "links", "copyright"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "feature-card",
+      "title": "Feature Grid Card",
+      "category": "data-display",
+      "tags": ["card", "grid", "bento", "data-display", "portfolio"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }

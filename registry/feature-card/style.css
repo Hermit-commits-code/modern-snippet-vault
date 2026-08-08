@@ -1,0 +1,105 @@
+/* Core Individual Card Container Design Rules */
+.vlt-feature-card {
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 340px;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Elevate and glow borders slightly when hovered */
+.vlt-feature-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Visual Tag Alignment Panels */
+.vlt-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vlt-card-badge {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.vlt-card-date {
+  font-size: 0.75rem;
+  color: #71717a;
+  font-weight: 500;
+}
+
+/* Primary Typography Rules */
+.vlt-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vlt-card-title {
+  color: #fafafa;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  transition: color 0.15s ease;
+}
+
+.vlt-feature-card:hover .vlt-card-title {
+  color: #3b82f6;
+}
+
+.vlt-card-description {
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Action Links and Icon Sliding Shifts */
+.vlt-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  /* Locks action block to bottom alignment boundaries */
+  padding-top: 0.5rem;
+}
+
+.vlt-card-action-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #fafafa;
+  transition: color 0.15s ease;
+}
+
+.vlt-card-arrow {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #fafafa;
+  transition: transform 0.2s ease, color 0.15s ease;
+}
+
+/* Push navigation arrows to the right smoothly when card receives cursor tracks */
+.vlt-feature-card:hover .vlt-card-action-text,
+.vlt-feature-card:hover .vlt-card-arrow {
+  color: #3b82f6;
+}
+
+.vlt-feature-card:hover .vlt-card-arrow {
+  transform: translateX(3px);
+}
