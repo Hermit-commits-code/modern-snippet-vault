@@ -1,0 +1,108 @@
+/* Core Structural Anchor Box */
+.vlt-dropdown-container {
+  position: relative;
+  display: inline-block;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 2rem auto;
+}
+
+/* Master Menu Action Trigger Layout */
+.vlt-dropdown-trigger-btn {
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  color: #fafafa;
+  padding: 0.6rem 1.15rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.vlt-dropdown-trigger-btn:hover {
+  border-color: #3b82f6;
+  background-color: #141417;
+}
+
+/* Tracking Chevron Custom Rotation rules */
+.vlt-dropdown-arrow {
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #a1a1aa;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vlt-dropdown-container.open .vlt-dropdown-arrow {
+  transform: rotate(-180deg);
+  color: #3b82f6;
+}
+
+/* Hidden Absolute Popup Menu List Framework */
+.vlt-dropdown-list-panel {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  min-width: 200px;
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 0.25rem;
+  list-style: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+
+  /* Initial hidden state scaling parameters */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transform-origin: top left;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+/* Toggle Visible Reveal Classes */
+.vlt-dropdown-container.open .vlt-dropdown-list-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Individual Navigation Drop List Anchor Items */
+.vlt-dropdown-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.vlt-dropdown-item:hover {
+  background-color: #141417;
+  color: #fafafa;
+}
+
+/* Danger / Reset Indicator Variant style adjustments */
+.vlt-danger-item:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Subtle separator dividing rules */
+.vlt-dropdown-divider {
+  height: 1px;
+  background-color: #27272a;
+  margin: 0.25rem 0;
+}
+
+/* Keyboard Accessibility Rings */
+.vlt-dropdown-trigger-btn:focus-visible,
+.vlt-dropdown-item:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}

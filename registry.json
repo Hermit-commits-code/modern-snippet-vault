@@ -85,6 +85,13 @@
       "category": "overlays",
       "tags": ["panel", "drawer", "sidebar", "overlay", "navigation"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "dropdown-menu",
+      "title": "Dropdown Selector Menu",
+      "category": "navigation",
+      "tags": ["dropdown", "menu", "select", "navigation", "interactive"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
