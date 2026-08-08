@@ -1,0 +1,116 @@
+/* Action Trigger Button Styling */
+.vlt-btn-toast-trigger {
+  background-color: #09090b;
+  color: #fafafa;
+  border: 1px solid #27272a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.vlt-btn-toast-trigger:hover {
+  background-color: #141417;
+}
+
+/* Toast Fixed Staging Anchor Position */
+.vlt-toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 9999;
+  font-family: system-ui, -apple-system, sans-serif;
+  pointer-events: none;
+  /* Prevents blocking clicks on underlying app layers */
+}
+
+/* Base Individual Toast Bubble Card */
+.vlt-toast-item {
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  color: #fafafa;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  /* Restores click tracking for the close action button */
+
+  /* Slide & Fade Keyframe Triggering */
+  animation: vltToastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Class to handle automated fade exits smoothly */
+.vlt-toast-item.exit {
+  animation: vltToastFadeOut 0.2s ease forwards;
+}
+
+.vlt-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Success Checkmark Circle Element */
+.vlt-toast-icon-check {
+  width: 1rem;
+  height: 1rem;
+  color: #10b981;
+  /* Success Green tint matching our system footers */
+  flex-shrink: 0;
+}
+
+.vlt-toast-close-x {
+  background: transparent;
+  border: none;
+  color: #71717a;
+  font-size: 1.15rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.25rem;
+}
+
+.vlt-toast-close-x:hover {
+  color: #fafafa;
+}
+
+/* ==========================================================================
+   TRANSITION KEYFRAME DEFINITIONS
+   ========================================================================== */
+
+@keyframes vltToastSlideIn {
+  from {
+    transform: translateY(1rem) scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes vltToastFadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}

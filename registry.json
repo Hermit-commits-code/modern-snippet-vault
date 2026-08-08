@@ -43,6 +43,13 @@
       "category": "data-display",
       "tags": ["card", "grid", "bento", "data-display", "portfolio"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "toast-notification",
+      "title": "Dynamic Toast Notification",
+      "category": "overlays",
+      "tags": ["toast", "notification", "banner", "feedback", "overlay"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
