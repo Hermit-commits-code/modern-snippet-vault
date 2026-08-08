@@ -92,6 +92,13 @@
       "category": "navigation",
       "tags": ["dropdown", "menu", "select", "navigation", "interactive"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "step-pagination",
+      "title": "Step Pagination Indicators",
+      "category": "navigation",
+      "tags": ["pagination", "navigation", "steps", "progress", "wizard"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }

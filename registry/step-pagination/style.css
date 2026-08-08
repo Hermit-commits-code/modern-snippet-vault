@@ -1,0 +1,120 @@
+/* Center Layout Outer Wrapper inside Sandbox Container */
+.vlt-wizard-wrapper {
+  max-width: 460px;
+  width: 100%;
+  margin: 3rem auto;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Master Timeline Slider Rail Pipeline */
+.vlt-progress-timeline-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+/* Structural Background Line (Inactive base wire track) */
+.vlt-progress-timeline-container::before {
+  content: '';
+  background-color: #e4e4e7;
+  /* Inactive track light gray */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Dynamic Active Progress Highlight Line Overlay */
+.vlt-progress-timeline-line {
+  background-color: #3b82f6;
+  /* System primary electric blue track */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  /* Adjusted smoothly by script state percentages */
+  z-index: 2;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Numeric Step Circle Node Shapes */
+.vlt-timeline-step {
+  background-color: #ffffff;
+  border: 3px solid #e4e4e7;
+  color: #a1a1aa;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  z-index: 3;
+  /* Forces node bubbles to stack crisply on top of lines */
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+/* Active State Circle Styles */
+.vlt-timeline-step.active {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Completed Past Steps Styling treatment */
+.vlt-timeline-step.complete {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Navigation Button Grid Control row */
+.vlt-wizard-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vlt-wizard-nav-btn {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+  user-select: none;
+}
+
+.vlt-wizard-nav-btn:hover:not(:disabled) {
+  background-color: #f4f4f5;
+}
+
+.vlt-wizard-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Primary Forward Action Trigger Accent variant overrides */
+.vlt-wizard-nav-btn.primary {
+  background-color: #18181b;
+  border-color: #18181b;
+  color: #ffffff;
+}
+
+.vlt-wizard-nav-btn.primary:hover:not(:disabled) {
+  background-color: #27272a;
+}
