@@ -1,0 +1,26 @@
+<!-- Trigger Action Button -->
+<button class="vlt-btn-panel-trigger" id="open-panel-btn" type="button">
+  View Filter Sidebar
+</button>
+
+<!-- Off-Canvas Drawer Architecture Layout -->
+<div class="vlt-side-drawer-container" id="side-drawer" aria-hidden="true">
+  <!-- Dynamic blurred background sheet layer -->
+  <div class="vlt-drawer-shading-backdrop" id="drawer-backdrop"></div>
+
+  <aside class="vlt-drawer-sheet-body">
+    <header class="vlt-drawer-sheet-header">
+      <h2 class="vlt-drawer-sheet-title">Filter Logs</h2>
+      <button class="vlt-drawer-sheet-close-x" id="close-panel-btn" aria-label="Close settings drawer">&times;</button>
+    </header>
+
+    <main class="vlt-drawer-sheet-main">
+      <div class="vlt-filter-group">
+        <span class="vlt-filter-label">Sort Content</span>
+        <label class="vlt-radio-opt"><input type="radio" name="sort" checked /> Anime Entries</label>
+        <label class="vlt-radio-opt"><input type="radio" name="sort" /> Reading Lists</label>
+        <label class="vlt-radio-opt"><input type="radio" name="sort" /> Code Projects</label>
+      </div>
+    </main>
+  </aside>
+</div>

@@ -1,0 +1,129 @@
+/* Action Trigger Custom Button Styling */
+.vlt-btn-panel-trigger {
+  background-color: #09090b;
+  color: #fafafa;
+  border: 1px solid #27272a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.vlt-btn-panel-trigger:hover {
+  background-color: #141417;
+}
+
+/* Structural Bounding Overlay Framework */
+.vlt-side-drawer-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 5000;
+  display: none;
+  /* Controlled dynamically by JavaScript class toggles */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.vlt-side-drawer-container.active {
+  display: block;
+}
+
+/* Translucent Background Shading Rules */
+.vlt-drawer-shading-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 9, 11, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+/* Sliding Interior Sheet Panel Layer */
+.vlt-drawer-sheet-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #0c0c0e;
+  border-left: 1px solid #27272a;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 15px -3px rgba(0, 0, 0, 0.3);
+
+  /* Start positioned completely outside screen viewport lines */
+  transform: translateX(100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vlt-side-drawer-container.active .vlt-drawer-sheet-body {
+  transform: translateX(0);
+}
+
+/* Header & Typography Rules */
+.vlt-drawer-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #27272a;
+}
+
+.vlt-drawer-sheet-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.vlt-drawer-sheet-close-x {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #a1a1aa;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.vlt-drawer-sheet-close-x:hover {
+  color: #fafafa;
+}
+
+/* Filter Contents Body Structure */
+.vlt-drawer-sheet-main {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vlt-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vlt-filter-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #71717a;
+  letter-spacing: 0.05em;
+}
+
+.vlt-radio-opt {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.vlt-radio-opt:hover {
+  color: #fafafa;
+}

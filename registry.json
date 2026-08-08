@@ -78,6 +78,13 @@
       "category": "data-display",
       "tags": ["accordion", "collapse", "content", "faq", "list"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "side-panel",
+      "title": "Slide-Out Side Panel",
+      "category": "overlays",
+      "tags": ["panel", "drawer", "sidebar", "overlay", "navigation"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
