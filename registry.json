@@ -64,6 +64,13 @@
       "category": "data-display",
       "tags": ["accordion", "tabs", "collapse", "data-display", "profile"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "contextual-tooltip",
+      "title": "Contextual Tooltip Drop",
+      "category": "overlays",
+      "tags": ["tooltip", "popup", "hover", "metadata", "overlay"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }

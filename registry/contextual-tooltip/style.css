@@ -1,0 +1,88 @@
+/* Layout row wrapper centering buttons inside sandbox monitor */
+.vlt-tooltip-row {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* The structural bounding box anchor */
+.vlt-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Interactive core button target */
+.vlt-tooltip-target {
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  color: #fafafa;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.vlt-tooltip-target:hover {
+  border-color: #3b82f6;
+  background-color: #141417;
+}
+
+/* Hidden Bubble Container Blueprint */
+.vlt-tooltip-bubble {
+  position: absolute;
+  bottom: 100%;
+  /* Places bubble directly above parent button container boundary */
+  left: 50%;
+  transform: translateX(-50%) translateY(4px) scale(0.95);
+  background-color: #09090b;
+  border: 1px solid #27272a;
+  color: #fafafa;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  /* Stops bubbles from intercepting cursor trace zones */
+  opacity: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+
+  /* Smooth micro-float animations */
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Micro Triangle Pointer Arrow */
+.vlt-tooltip-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  /* Locks triangle arrow tip directly to bottom base lines */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: #27272a transparent transparent transparent;
+}
+
+/* Active State Visibility: Reveal bubbles on Hover OR Keyboard Focus Tab loops */
+.vlt-tooltip-wrapper:hover .vlt-tooltip-bubble,
+.vlt-tooltip-target:focus-visible+.vlt-tooltip-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px) scale(1);
+}
+
+/* Keyboard Accessible Focus Visible Target Indicator Rings */
+.vlt-tooltip-target:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
