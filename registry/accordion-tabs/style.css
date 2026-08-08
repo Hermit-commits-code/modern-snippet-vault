@@ -1,0 +1,110 @@
+.vlt-accordion {
+  max-width: 500px;
+  width: 100%;
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.vlt-accordion-item {
+  border-bottom: 1px solid #27272a;
+}
+
+.vlt-accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Control Trigger Buttons */
+.vlt-accordion-trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  color: #fafafa;
+  outline: none;
+}
+
+.vlt-accordion-title {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.vlt-accordion-trigger:hover .vlt-accordion-title {
+  color: #3b82f6;
+}
+
+/* Animated Plus-to-Minus Indicator Shape */
+.vlt-accordion-icon {
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.vlt-accordion-icon::before,
+.vlt-accordion-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #a1a1aa;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Horizontal Line */
+.vlt-accordion-icon::before {
+  top: 5px;
+  left: 0;
+  width: 12px;
+  height: 2px;
+}
+
+/* Vertical Line */
+.vlt-accordion-icon::after {
+  top: 0;
+  left: 5px;
+  width: 2px;
+  height: 12px;
+}
+
+/* Transition vertical segment away when active to create a clean minus symbol */
+.vlt-accordion-item.open .vlt-accordion-icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.vlt-accordion-item.open .vlt-accordion-icon::before {
+  transform: rotate(180deg);
+  background-color: #3b82f6;
+}
+
+/* Collapsible Content Enclosure */
+.vlt-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dynamic open state max-height overrides handled by JavaScript calculations */
+.vlt-accordion-item.open .vlt-accordion-content {
+  max-height: 120px;
+  /* Safe upper constraint allocation */
+}
+
+.vlt-accordion-body {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Keyboard Accessibility Rings */
+.vlt-accordion-trigger:focus-visible {
+  background-color: rgba(59, 130, 246, 0.05);
+  box-shadow: inset 0 0 0 2px #3b82f6;
+}

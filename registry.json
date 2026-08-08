@@ -57,6 +57,13 @@
       "category": "forms",
       "tags": ["switch", "toggle", "checkbox", "form", "interactive"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "accordion-tabs",
+      "title": "Segmented Info Accordion",
+      "category": "data-display",
+      "tags": ["accordion", "tabs", "collapse", "data-display", "profile"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
