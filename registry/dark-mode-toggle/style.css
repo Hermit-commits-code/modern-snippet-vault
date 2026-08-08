@@ -1,0 +1,129 @@
+/* ==========================================================================
+   1. DEFAULT LIGHT THEME DESIGN VALUES (DEFAULT FALLBACK)
+   ========================================================================== */
+.vlt-theme-card {
+  --theme-bg: #f4f4f5;
+  /* Soft off-white background track */
+  --theme-card-bg: #ffffff;
+  /* Pure white panel fill */
+  --theme-border: #e4e4e7;
+  /* Zinc boundary line */
+  --theme-text-main: #18181b;
+  /* Deep dark slate text */
+  --theme-text-muted: #71717a;
+  /* Secondary text grey */
+
+  /* Structural Card Definitions */
+  background-color: var(--theme-card-bg);
+  border: 1px solid var(--theme-border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 2rem auto;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ==========================================================================
+   2. AUTOMATIC SYSTEM DARK MODE CONFIGURATIONS
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  .vlt-theme-card {
+    --theme-bg: #09090b;
+    --theme-card-bg: #141417;
+    --theme-border: #27272a;
+    --theme-text-main: #fafafa;
+    --theme-text-muted: #a1a1aa;
+  }
+}
+
+/* ==========================================================================
+   3. EXPLICIT CLASS STATE SWAP VALUES
+   ========================================================================== */
+.vlt-theme-card.light-override {
+  --theme-bg: #f4f4f5;
+  --theme-card-bg: #ffffff;
+  --theme-border: #e4e4e7;
+  --theme-text-main: #18181b;
+  --theme-text-muted: #71717a;
+}
+
+.vlt-theme-card.dark-override {
+  --theme-bg: #09090b;
+  --theme-card-bg: #141417;
+  --theme-border: #27272a;
+  --theme-text-main: #fafafa;
+  --theme-text-muted: #a1a1aa;
+}
+
+/* ==========================================================================
+   4. TYPOGRAPHY AND BUTTON LINK CONTROLS
+   ========================================================================== */
+.vlt-theme-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.vlt-theme-card-title {
+  color: var(--theme-text-main);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.vlt-theme-card-body {
+  color: var(--theme-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.vlt-theme-toggle-btn {
+  background-color: var(--theme-bg);
+  border: 1px solid var(--theme-border);
+  color: var(--theme-text-main);
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Manage visual button labels dynamically matching state variables */
+.vlt-mode-icon-sun {
+  display: none;
+}
+
+.vlt-mode-icon-moon {
+  display: inline;
+}
+
+.vlt-theme-card.dark-override .vlt-mode-icon-sun {
+  display: inline;
+}
+
+.vlt-theme-card.dark-override .vlt-mode-icon-moon {
+  display: none;
+}
+
+.vlt-theme-card.light-override .vlt-mode-icon-sun {
+  display: none;
+}
+
+.vlt-theme-card.light-override .vlt-mode-icon-moon {
+  display: inline;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  /* Default system dark hides moon and presents sun */
+  .vlt-theme-card:not(.light-override) .vlt-mode-icon-sun {
+    display: inline;
+  }
+
+  .vlt-theme-card:not(.light-override) .vlt-mode-icon-moon {
+    display: none;
+  }
+}
