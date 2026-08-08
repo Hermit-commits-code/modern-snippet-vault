@@ -1,0 +1,104 @@
+/* Core Structural Box Layout Constraints */
+.vlt-upload-bounding-box {
+  max-width: 440px;
+  width: 100%;
+  background-color: #0c0c0e;
+  border: 2px dashed #27272a;
+  border-radius: 8px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  margin: 1rem auto;
+}
+
+/* Hide the raw file selector field visually from screen tracking */
+.vlt-hidden-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Active Highlight States (Triggered via cursor hover OR drag dragover event streams) */
+.vlt-upload-bounding-box:hover,
+.vlt-upload-bounding-box.drag-over-highlight {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.02);
+}
+
+.vlt-upload-content-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  pointer-events: none;
+  /* Stops text fields from interrupting tracking boundaries */
+}
+
+/* Cloud Graphic Vector Accents */
+.vlt-upload-cloud-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #71717a;
+  transition: color 0.15s ease;
+}
+
+.vlt-upload-bounding-box:hover .vlt-upload-cloud-icon,
+.vlt-upload-bounding-box.drag-over-highlight .vlt-upload-cloud-icon {
+  color: #3b82f6;
+}
+
+/* Core Typography Profiles */
+.vlt-upload-main-instruction {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+.vlt-upload-highlight-text {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.vlt-upload-sub-text {
+  font-size: 0.75rem;
+  color: #71717a;
+}
+
+/* Uploaded Files Tracking List Layout */
+.vlt-file-tracker-feed {
+  max-width: 440px;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0;
+  list-style: none;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vlt-uploaded-file-node {
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.8125rem;
+  color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vlt-file-node-meta-size {
+  color: #71717a;
+  font-weight: 500;
+}
