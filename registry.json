@@ -106,6 +106,20 @@
       "category": "forms",
       "tags": ["upload", "file", "drag-drop", "form", "input"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "dark-mode-toggle",
+      "title": "Dark Mode Toggle",
+      "category": "primitives",
+      "tags": ["theme", "dark-mode", "accessibility", "css-variables"],
+      "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "accessible-breadcrumbs",
+      "title": "Accessible Breadcrumbs",
+      "category": "navigation",
+      "tags": ["breadcrumbs", "navigation", "accessibility", "aria-current"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }

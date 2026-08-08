@@ -1,0 +1,70 @@
+/* Core Navigation Row Constraints */
+.vlt-breadcrumbs-nav {
+  padding: 1rem 1.5rem;
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  max-width: fit-content;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 2rem auto;
+}
+
+/* Flex List Layout Resets */
+.vlt-breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.vlt-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Interactive Navigation Links */
+.vlt-breadcrumb-link {
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  border-radius: 4px;
+}
+
+.vlt-breadcrumb-link:hover {
+  color: #3b82f6;
+  /* Accent primary blue tint */
+}
+
+/* The Active Page Current Label */
+.vlt-breadcrumb-current {
+  color: #fafafa;
+  /* Highlighted contrast white for the active location */
+  font-weight: 600;
+  user-select: none;
+}
+
+/* ==========================================================================
+   CSS SEPARATOR ACCENT INJECTIONS
+   ========================================================================== */
+
+/* Inject dividers between list items automatically without cluttering markup */
+.vlt-breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: #52525b;
+  /* Zinc dark gray divider tint */
+  font-weight: 400;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Keyboard Accessible Focus Rings matching shadcn layout principles */
+.vlt-breadcrumb-link:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
