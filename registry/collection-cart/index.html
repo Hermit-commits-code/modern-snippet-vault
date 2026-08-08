@@ -1,0 +1,31 @@
+<!-- Floating Action Deck Header Trigger (Tracks count in real-time) -->
+<button class="vlt-deck-trigger-btn" id="deck-toggle-action" type="button">
+  <span>Bookmarks Deck</span>
+  <span class="vlt-deck-count-badge" id="deck-counter">0</span>
+</button>
+
+<!-- Sliding Collection Canvas Layout Frame -->
+<div class="vlt-deck-drawer-overlay" id="deck-drawer-panel" aria-hidden="true">
+  <div class="vlt-deck-backdrop" id="deck-backdrop-close"></div>
+
+  <aside class="vlt-deck-sheet">
+    <header class="vlt-deck-header">
+      <h2 class="vlt-deck-title">Collected Files</h2>
+      <button class="vlt-deck-close-x" id="deck-close-btn" aria-label="Close bookmarks panel">&times;</button>
+    </header>
+
+    <!-- Dynamic Cart List Items Target Feed -->
+    <main class="vlt-deck-main-scroll" id="deck-items-target">
+      <!-- Empty State Frame -->
+      <div class="vlt-deck-empty-state" id="deck-empty-message">No files bookmarked in your active deck session.</div>
+    </main>
+
+    <footer class="vlt-deck-footer">
+      <div class="vlt-deck-summary-row">
+        <span>Total Items:</span>
+        <span id="deck-summary-count">0</span>
+      </div>
+      <button class="vlt-btn-deck-clear" id="deck-clear-action" type="button">Wipe Active Deck</button>
+    </footer>
+  </aside>
+</div>

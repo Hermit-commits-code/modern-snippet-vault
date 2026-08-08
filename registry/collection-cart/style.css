@@ -1,0 +1,171 @@
+/* Floating Action Trigger Button Layout */
+.vlt-deck-trigger-btn {
+  position: relative;
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  color: #fafafa;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vlt-deck-trigger-btn:hover {
+  border-color: #3b82f6;
+}
+
+.vlt-deck-count-badge {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 20px;
+}
+
+/* Master Overlay Frame Container */
+.vlt-deck-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 6000;
+  display: none;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.vlt-deck-drawer-overlay.open {
+  display: block;
+}
+
+.vlt-deck-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 9, 11, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+/* Sliding Cart Drawer Sheet Structure */
+.vlt-deck-sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background-color: #0c0c0e;
+  border-left: 1px solid #27272a;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 15px -3px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vlt-deck-drawer-overlay.open .vlt-deck-sheet {
+  transform: translateX(0);
+}
+
+/* Internal Typography & Form Components Row Layouts */
+.vlt-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #27272a;
+}
+
+.vlt-deck-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.vlt-deck-close-x {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #a1a1aa;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.vlt-deck-close-x:hover {
+  color: #fafafa;
+}
+
+.vlt-deck-main-scroll {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vlt-deck-empty-state {
+  font-size: 0.875rem;
+  color: #71717a;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+/* Individual Item Card Feeds inside the Cart */
+.vlt-cart-item-node {
+  background-color: #141417;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #fafafa;
+}
+
+.vlt-cart-item-remove-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.vlt-deck-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #27272a;
+  background-color: #09090b;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vlt-deck-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.vlt-btn-deck-clear {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.vlt-btn-deck-clear:hover {
+  background-color: #dc2626;
+}

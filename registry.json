@@ -120,6 +120,13 @@
       "category": "navigation",
       "tags": ["breadcrumbs", "navigation", "accessibility", "aria-current"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "collection-cart",
+      "title": "Data Collection Deck",
+      "category": "overlays",
+      "tags": ["shopping-cart", "collection", "drawer", "data-display", "interactive"],
+      "files": ["index.html", "style.css", "script.js"]
     }
   ]
 }
