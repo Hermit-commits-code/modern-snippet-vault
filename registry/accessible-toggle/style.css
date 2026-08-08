@@ -1,0 +1,79 @@
+/* Outer Label Frame Layout Wrapper */
+.vlt-switch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Hide the raw checkbox input visually while leaving it accessible to focus tabs */
+.vlt-switch-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Base Track Capsule Container Blueprint */
+.vlt-switch-track {
+  width: 44px;
+  height: 24px;
+  background-color: #e4e4e7;
+  /* Neutral zinc tint for default inactive state */
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interior Sliding Knob Thumb Shape */
+.vlt-switch-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active State Styles: Shift track background fill when checked */
+.vlt-switch-checkbox:checked~.vlt-switch-track {
+  background-color: #3b82f6;
+  /* System primary electric blue tint */
+}
+
+/* Active State Styles: Slide thumb sphere position to right boundary */
+.vlt-switch-checkbox:checked~.vlt-switch-track .vlt-switch-thumb {
+  transform: translateX(20px);
+}
+
+/* Keyboard Accessible Focus Visible State Outlines */
+.vlt-switch-checkbox:focus-visible~.vlt-switch-track {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+}
+
+/* Disabled State Layout Overrides */
+.vlt-switch-checkbox:disabled~.vlt-switch-track {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vlt-switch-checkbox:disabled~.vlt-switch-text {
+  color: #9ca3af;
+  cursor: not-allowed;
+}

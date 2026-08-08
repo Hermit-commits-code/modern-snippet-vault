@@ -50,6 +50,13 @@
       "category": "overlays",
       "tags": ["toast", "notification", "banner", "feedback", "overlay"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "accessible-toggle",
+      "title": "Accessible Switch Toggle",
+      "category": "forms",
+      "tags": ["switch", "toggle", "checkbox", "form", "interactive"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }
