@@ -29,6 +29,13 @@
       "category": "navigation",
       "tags": ["navbar", "navigation", "header", "responsive", "mobile-menu"],
       "files": ["index.html", "style.css", "script.js"]
+    },
+    {
+      "id": "global-footer",
+      "title": "Unified Global App Footer",
+      "category": "primitives",
+      "tags": ["footer", "layout", "links", "copyright"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }

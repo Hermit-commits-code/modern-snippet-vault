@@ -1,0 +1,150 @@
+/* Core App Base Footer Rules matching modern platform templates */
+.vlt-footer {
+  background-color: #09090b;
+  border-top: 1px solid #27272a;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #fafafa;
+}
+
+.vlt-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+/* Individual Content Column Matrix Weights */
+.vlt-footer-brand-col {
+  flex: 2 1 300px;
+  /* Gives the brand layout more explicit width precedence */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vlt-footer-links-col {
+  flex: 1 1 140px;
+  /* Ensures clean micro column splitting boundaries */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vlt-footer-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fafafa;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+}
+
+.vlt-footer-tagline {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #a1a1aa;
+  max-width: 320px;
+}
+
+.vlt-footer-heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fafafa;
+  margin-bottom: 0.25rem;
+}
+
+.vlt-footer-link {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  width: fit-content;
+}
+
+.vlt-footer-link:hover {
+  color: #3b82f6;
+}
+
+/* Bottom Baseline Processing Panel Strip */
+.vlt-footer-bottom {
+  margin-top: 4rem;
+  border-top: 1px solid #27272a;
+  padding-top: 2rem;
+}
+
+.vlt-footer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.vlt-footer-copy {
+  font-size: 0.8125rem;
+  color: #71717a;
+}
+
+/* Real-Time Platform Performance Light Indicator Statuses */
+.vlt-footer-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vlt-status-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Animated radar waves mimicking modern operational clouds */
+.vlt-status-pulse::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: vltPulseWave 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.vlt-status-text {
+  font-size: 0.8125rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+/* Radar Tracking Wave Keyframe Loops */
+@keyframes vltPulseWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Media Screen Adjustments for Small Handheld viewports */
+@media (max-width: 640px) {
+  .vlt-footer-inner {
+    gap: 2rem;
+  }
+
+  .vlt-footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
