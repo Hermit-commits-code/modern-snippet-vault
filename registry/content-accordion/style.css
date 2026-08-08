@@ -1,0 +1,87 @@
+/* Core Accordion Container Box Layout */
+.vlt-content-accordion {
+  max-width: 440px;
+  width: 100%;
+  background-color: #0c0c0e;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 1rem auto 4rem auto;
+}
+
+.vlt-accordion-block {
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  flex-direction: column;
+}
+
+.vlt-accordion-block:last-child {
+  border-bottom: none;
+}
+
+/* Completely remove the checkbox elements from view */
+.vlt-acc-check-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Header Trigger Bar Layout rules */
+.vlt-accordion-head {
+  padding: 1.15rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #fafafa;
+  font-size: 0.95rem;
+  font-weight: 600;
+  user-select: none;
+  background-color: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.vlt-accordion-head:hover {
+  background-color: #141417;
+}
+
+/* Vector Arrow Configurations */
+.vlt-accordion-chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #a1a1aa;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+/* Hidden Collapsible Slide Drawer Layer */
+.vlt-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+}
+
+/* Interior Content Content Framing Padding */
+.vlt-accordion-inner {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   PURE CSS COMBINATOR STATE TRIGGERS
+   ========================================================================== */
+
+/* Flip the chevron arrow upside down when the target checkbox is clicked */
+.vlt-acc-check-input:checked+.vlt-accordion-head .vlt-accordion-chevron {
+  transform: rotate(-180deg);
+  color: #3b82f6;
+}
+
+/* Expand the panel height target path smoothly when checked */
+.vlt-acc-check-input:checked+.vlt-accordion-head+.vlt-accordion-panel {
+  max-height: 200px;
+}

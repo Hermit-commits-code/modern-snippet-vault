@@ -107,7 +107,7 @@ function updateSandboxPreview() {
       <head>
         <meta charset='UTF-8'>
         <style>
-          body{margin: 1rem; font-family: system-ui, sans-serif; background: #fafafa; color: #000;}
+          body{margin: 1rem; font-family: system-ui, sans-serif; background: #fafafa; color: #000; overflow-y:auto;
           ${loadedFiles.css}
         </style>
       </head>

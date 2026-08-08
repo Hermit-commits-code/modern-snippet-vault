@@ -71,6 +71,13 @@
       "category": "overlays",
       "tags": ["tooltip", "popup", "hover", "metadata", "overlay"],
       "files": ["index.html", "style.css"]
+    },
+    {
+      "id": "content-accordion",
+      "title": "Accordion Content Expansion",
+      "category": "data-display",
+      "tags": ["accordion", "collapse", "content", "faq", "list"],
+      "files": ["index.html", "style.css"]
     }
   ]
 }
